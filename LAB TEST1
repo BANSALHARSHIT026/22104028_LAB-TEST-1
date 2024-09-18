@@ -1,0 +1,49 @@
+import numpy as np
+import matplotlib as py
+
+A=np.array([30,32,31,29,28,27,26])
+B=np.array([35,34,36,33,32,31,30])
+C=np.array([25,26,27,28,29,30,31])
+D=np.array([22,23,24,25,26,27,28])
+
+def averagetemp(city):
+    i=0
+    sum=0
+    while(i<7):
+        sum=sum+city[i]
+        i=i+1
+    avg=sum/7
+    print("avg temp for cities over 7 days is: ",avg)
+averagetemp(A)
+averagetemp(B)
+averagetemp(C)
+averagetemp(D)
+def maxmin(city):
+    i=0
+    maxi=0
+    mini=100
+    while(i<7):
+        if(maxi<city[i]):
+            maxi=city[i]
+        if(mini>city[i]):
+            mini=city[i]
+            i=i+1
+    print("maximum temp: ",maxi," minimum temp: ",mini)
+maxmin(A)
+maxmin(B)
+maxmin(C)
+maxmin(D)
+
+
+
+def avgtemp(city1, city2, city3, city4):
+    i=0
+    while(i<7):
+        avg1= (city1[i]+city2[i]+city3[i]+city4[i])/4
+        print("avg temprature on day ",i+1," is: ",avg)
+        i=i+1
+avgtemp(A,B,C,D)
+
+
+
+    
